@@ -8,20 +8,65 @@
 
 /* Begin PBXBuildFile section */
 		99A05CD9225CB90500EE4A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A05CD8225CB90500EE4A6C /* AppDelegate.swift */; };
-		99A05CDB225CB90500EE4A6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A05CDA225CB90500EE4A6C /* ViewController.swift */; };
 		99A05CDE225CB90500EE4A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A05CDC225CB90500EE4A6C /* Main.storyboard */; };
 		99A05CE0225CB90600EE4A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A05CDF225CB90600EE4A6C /* Assets.xcassets */; };
 		99A05CE3225CB90600EE4A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A05CE1225CB90600EE4A6C /* LaunchScreen.storyboard */; };
+		99A05CEB225CBD0B00EE4A6C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A05CEA225CBD0B00EE4A6C /* SnapKit.framework */; };
+		99A05CEC225CBD0B00EE4A6C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99A05CEA225CBD0B00EE4A6C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99A05CFC225CC0E900EE4A6C /* RegistrationListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A05CFB225CC0E900EE4A6C /* RegistrationListProtocols.swift */; };
+		99A05CFE225CCD0800EE4A6C /* RegistrationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A05CFD225CCD0800EE4A6C /* RegistrationListView.swift */; };
+		99AE0674225F4C7300EC84B1 /* DetailsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE0673225F4C7300EC84B1 /* DetailsListView.swift */; };
+		99AE0677225F57B000EC84B1 /* DetailsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE0676225F57B000EC84B1 /* DetailsListProtocols.swift */; };
+		99AE0679225F58DC00EC84B1 /* DetailsListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE0678225F58DC00EC84B1 /* DetailsListWireFrame.swift */; };
+		99AE067B225F596600EC84B1 /* DetailsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE067A225F596600EC84B1 /* DetailsListPresenter.swift */; };
+		99E745CF225DF37300E1273B /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E745CE225DF37300E1273B /* Register.swift */; };
+		99E745D1225DFB9700E1273B /* RegistrationListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E745D0225DFB9700E1273B /* RegistrationListPresenter.swift */; };
+		99E745D3225DFCBC00E1273B /* RegistrationListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E745D2225DFCBC00E1273B /* RegistrationListInteractor.swift */; };
+		99E745D6225E04B000E1273B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E745D5225E04B000E1273B /* Validation.swift */; };
+		99E745D8225E1F5900E1273B /* RegistrationListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E745D7225E1F5900E1273B /* RegistrationListWireFrame.swift */; };
+		99E745DD225E3BB100E1273B /* SwiftEntryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745DA225E3BB100E1273B /* SwiftEntryKit.framework */; };
+		99E745DE225E3BB100E1273B /* SwiftEntryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745DA225E3BB100E1273B /* SwiftEntryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99E745DF225E3BD100E1273B /* QuickLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745D9225E3BB100E1273B /* QuickLayout.framework */; };
+		99E745E0225E3BD100E1273B /* QuickLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745D9225E3BB100E1273B /* QuickLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99A05CED225CBD0B00EE4A6C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99A05CEC225CBD0B00EE4A6C /* SnapKit.framework in Embed Frameworks */,
+				99E745E0225E3BD100E1273B /* QuickLayout.framework in Embed Frameworks */,
+				99E745DE225E3BB100E1273B /* SwiftEntryKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		99A05CD5225CB90500EE4A6C /* RegistrationFormVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationFormVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A05CD8225CB90500EE4A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99A05CDA225CB90500EE4A6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99A05CDD225CB90500EE4A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99A05CDF225CB90600EE4A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99A05CE2225CB90600EE4A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99A05CE4225CB90600EE4A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99A05CEA225CBD0B00EE4A6C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		99A05CFB225CC0E900EE4A6C /* RegistrationListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListProtocols.swift; sourceTree = "<group>"; };
+		99A05CFD225CCD0800EE4A6C /* RegistrationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListView.swift; sourceTree = "<group>"; };
+		99AE0673225F4C7300EC84B1 /* DetailsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListView.swift; sourceTree = "<group>"; };
+		99AE0676225F57B000EC84B1 /* DetailsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListProtocols.swift; sourceTree = "<group>"; };
+		99AE0678225F58DC00EC84B1 /* DetailsListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListWireFrame.swift; sourceTree = "<group>"; };
+		99AE067A225F596600EC84B1 /* DetailsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListPresenter.swift; sourceTree = "<group>"; };
+		99E745CE225DF37300E1273B /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		99E745D0225DFB9700E1273B /* RegistrationListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListPresenter.swift; sourceTree = "<group>"; };
+		99E745D2225DFCBC00E1273B /* RegistrationListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListInteractor.swift; sourceTree = "<group>"; };
+		99E745D5225E04B000E1273B /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		99E745D7225E1F5900E1273B /* RegistrationListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListWireFrame.swift; sourceTree = "<group>"; };
+		99E745D9225E3BB100E1273B /* QuickLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuickLayout.framework; sourceTree = "<group>"; };
+		99E745DA225E3BB100E1273B /* SwiftEntryKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEntryKit.framework; path = Carthage/Build/iOS/SwiftEntryKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A05CEB225CBD0B00EE4A6C /* SnapKit.framework in Frameworks */,
+				99E745DF225E3BD100E1273B /* QuickLayout.framework in Frameworks */,
+				99E745DD225E3BB100E1273B /* SwiftEntryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				99A05CD7225CB90500EE4A6C /* RegistrationFormVIPER */,
+				99E745D9225E3BB100E1273B /* QuickLayout.framework */,
+				99E745DA225E3BB100E1273B /* SwiftEntryKit.framework */,
+				99A05CEA225CBD0B00EE4A6C /* SnapKit.framework */,
 				99A05CD6225CB90500EE4A6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +105,144 @@
 		99A05CD7225CB90500EE4A6C /* RegistrationFormVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				99E745D4225E035400E1273B /* Validation */,
+				99A05CF4225CBE5F00EE4A6C /* RegistrationList */,
+				99A05CF5225CBE9300EE4A6C /* DetailsList */,
 				99A05CD8225CB90500EE4A6C /* AppDelegate.swift */,
-				99A05CDA225CB90500EE4A6C /* ViewController.swift */,
 				99A05CDC225CB90500EE4A6C /* Main.storyboard */,
 				99A05CDF225CB90600EE4A6C /* Assets.xcassets */,
 				99A05CE1225CB90600EE4A6C /* LaunchScreen.storyboard */,
 				99A05CE4225CB90600EE4A6C /* Info.plist */,
 			);
 			path = RegistrationFormVIPER;
+			sourceTree = "<group>";
+		};
+		99A05CEE225CBE0E00EE4A6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99A05CFD225CCD0800EE4A6C /* RegistrationListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99A05CEF225CBE2700EE4A6C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				99E745D2225DFCBC00E1273B /* RegistrationListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		99A05CF0225CBE2F00EE4A6C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				99E745D0225DFB9700E1273B /* RegistrationListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		99A05CF1225CBE4200EE4A6C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				99E745CE225DF37300E1273B /* Register.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		99A05CF2225CBE4900EE4A6C /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				99E745D7225E1F5900E1273B /* RegistrationListWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		99A05CF3225CBE5200EE4A6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				99A05CFB225CC0E900EE4A6C /* RegistrationListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		99A05CF4225CBE5F00EE4A6C /* RegistrationList */ = {
+			isa = PBXGroup;
+			children = (
+				99A05CF3225CBE5200EE4A6C /* Protocols */,
+				99A05CF2225CBE4900EE4A6C /* WireFrame */,
+				99A05CF1225CBE4200EE4A6C /* Entity */,
+				99A05CF0225CBE2F00EE4A6C /* Presenter */,
+				99A05CEF225CBE2700EE4A6C /* Interactor */,
+				99A05CEE225CBE0E00EE4A6C /* View */,
+			);
+			path = RegistrationList;
+			sourceTree = "<group>";
+		};
+		99A05CF5225CBE9300EE4A6C /* DetailsList */ = {
+			isa = PBXGroup;
+			children = (
+				99AE0675225F579600EC84B1 /* Protocols */,
+				99A05CFA225CBF2D00EE4A6C /* WireFrame */,
+				99A05CF9225CBECB00EE4A6C /* Entity */,
+				99A05CF8225CBEC400EE4A6C /* Presenter */,
+				99A05CF7225CBEBD00EE4A6C /* Interactor */,
+				99A05CF6225CBEA900EE4A6C /* View */,
+			);
+			path = DetailsList;
+			sourceTree = "<group>";
+		};
+		99A05CF6225CBEA900EE4A6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE0673225F4C7300EC84B1 /* DetailsListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99A05CF7225CBEBD00EE4A6C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		99A05CF8225CBEC400EE4A6C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				99AE067A225F596600EC84B1 /* DetailsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		99A05CF9225CBECB00EE4A6C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		99A05CFA225CBF2D00EE4A6C /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				99AE0678225F58DC00EC84B1 /* DetailsListWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		99AE0675225F579600EC84B1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				99AE0676225F57B000EC84B1 /* DetailsListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		99E745D4225E035400E1273B /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				99E745D5225E04B000E1273B /* Validation.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +255,7 @@
 				99A05CD1225CB90500EE4A6C /* Sources */,
 				99A05CD2225CB90500EE4A6C /* Frameworks */,
 				99A05CD3225CB90500EE4A6C /* Resources */,
+				99A05CED225CBD0B00EE4A6C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,8 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99A05CDB225CB90500EE4A6C /* ViewController.swift in Sources */,
 				99A05CD9225CB90500EE4A6C /* AppDelegate.swift in Sources */,
+				99A05CFC225CC0E900EE4A6C /* RegistrationListProtocols.swift in Sources */,
+				99E745D3225DFCBC00E1273B /* RegistrationListInteractor.swift in Sources */,
+				99E745D8225E1F5900E1273B /* RegistrationListWireFrame.swift in Sources */,
+				99E745CF225DF37300E1273B /* Register.swift in Sources */,
+				99E745D1225DFB9700E1273B /* RegistrationListPresenter.swift in Sources */,
+				99A05CFE225CCD0800EE4A6C /* RegistrationListView.swift in Sources */,
+				99AE0674225F4C7300EC84B1 /* DetailsListView.swift in Sources */,
+				99AE0679225F58DC00EC84B1 /* DetailsListWireFrame.swift in Sources */,
+				99AE0677225F57B000EC84B1 /* DetailsListProtocols.swift in Sources */,
+				99E745D6225E04B000E1273B /* Validation.swift in Sources */,
+				99AE067B225F596600EC84B1 /* DetailsListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +476,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DH5S35BHEZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RegistrationFormVIPER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +499,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DH5S35BHEZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RegistrationFormVIPER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
