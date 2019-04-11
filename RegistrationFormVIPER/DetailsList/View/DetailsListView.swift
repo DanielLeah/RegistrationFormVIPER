@@ -21,7 +21,7 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
         initViews()
         addGestures()
     }
-    
+
     func initUser () {
         if let userData = UserDefaults.standard.data(forKey: "user"),
             let userDefault = try? JSONDecoder().decode(Register.self, from: userData) {
@@ -91,6 +91,18 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(swipeDown)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
+        self.view.addGestureRecognizer(swipeUp)
     }
     
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
@@ -100,13 +112,13 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
             
             switch swipeGesture.direction {
             case UISwipeGestureRecognizer.Direction.right:
-                print("Swiped right")
+                presenter?.wireframe?.goBackToRegistration(from: self, with:2)
             case UISwipeGestureRecognizer.Direction.down:
-                presenter?.wireframe?.goBackToRegistration(from: self)
+                presenter?.wireframe?.goBackToRegistration(from: self, with:3)
             case UISwipeGestureRecognizer.Direction.left:
-                print("Swiped left")
+                presenter?.wireframe?.goBackToRegistration(from: self, with:4)
             case UISwipeGestureRecognizer.Direction.up:
-                print("Swiped up")
+                presenter?.wireframe?.goBackToRegistration(from: self, with:1)
             default:
                 break
             }

@@ -62,6 +62,11 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         setupTitle()
         setupInputs()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     //MARK: Gesture Recognizer
     func addGestures(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -340,7 +345,6 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         showNotification(message: message, img: img, superTitle: title)
     
         if (img == "success"){
-            print("fwe")
             presenter?.showUserDetails(view: self)
         }
     }

@@ -30,6 +30,6 @@ protocol DetailsListOutputInteractorProtocol : class {
 }
 
 protocol DetailsListWireFrameProtocol : class {
-    func goBackToRegistration(from view: UIViewController)
+    func goBackToRegistration(from view: UIViewController, with animation: Int)
 }
 

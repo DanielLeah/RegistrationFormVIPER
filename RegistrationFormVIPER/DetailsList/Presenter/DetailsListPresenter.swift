@@ -17,8 +17,8 @@ class DetailsListPresenter: DetailsListPresenterProtocol {
         view?.initUser()
     }
     
-    func backButtonPressed(from view: UIViewController) {
-        wireframe?.goBackToRegistration(from: view)
+    func backButtonPressed(from view: UIViewController, with animation: Int) {
+        wireframe?.goBackToRegistration(from: view, with: animation)
     }
 
 }
