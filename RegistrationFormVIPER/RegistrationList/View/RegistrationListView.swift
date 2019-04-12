@@ -146,6 +146,7 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
             txt.borderStyle = .none
             txt.font = UIFont(name: "Futura-Bold", size: 15.0)
             txt.backgroundColor = .white
+            txt.setLeftPaddingPoints(10)
             txt.layer.cornerRadius = 10
             return txt
         }()
@@ -173,6 +174,7 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
             txt.borderStyle = .none
             txt.keyboardType = .emailAddress
             txt.autocapitalizationType = .none
+            txt.setLeftPaddingPoints(10)
             txt.font = UIFont(name: "Futura-Bold", size: 15.0)
             txt.backgroundColor = .white
             txt.layer.cornerRadius = 10
@@ -201,6 +203,7 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
             txt.placeholder = "Enter your password"
             txt.borderStyle = .none
             txt.isSecureTextEntry = true
+            txt.setLeftPaddingPoints(10)
             txt.font = UIFont(name: "Futura-Bold", size: 15.0)
             txt.backgroundColor = .white
             txt.layer.cornerRadius = 10
@@ -231,7 +234,7 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
             seg.selectedSegmentIndex = 0
             seg.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 14.0)!], for: .normal)
             seg.layer.cornerRadius = 10.0
-            seg.tintColor = .red
+            seg.tintColor = .darkGray
             return seg
         }()
         
@@ -258,6 +261,7 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
             txt.placeholder = "Enter your phone"
             txt.borderStyle = .none
             txt.keyboardType = .numberPad
+            txt.setLeftPaddingPoints(10)
             txt.font = UIFont(name: "Futura-Bold", size: 15.0)
             txt.backgroundColor = .white
             txt.layer.cornerRadius = 10
@@ -274,8 +278,11 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         
         let buttonSubmit : UIButton = {
             let button = UIButton(type: .system)
-            button.backgroundColor = .red
+            button.backgroundColor = .clear
             button.layer.cornerRadius = 20.0
+            button.layer.borderColor = UIColor.red.cgColor
+            button.layer.borderWidth = 1
+            button.setTitleColor(.red, for: .normal)
             button.titleLabel?.font =  UIFont(name: "Futura-Bold", size: 25.0)
             button.setTitle("Submit", for: .normal)
             button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -326,11 +333,11 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         }
         
         buttonStackView.snp.makeConstraints { (make) in
-            make.height.equalTo(telStackView).multipliedBy(2.5)
-            make.height.equalTo(genderStackView).multipliedBy(2.5)
-            make.height.equalTo(passwordStackView).multipliedBy(2.5)
-            make.height.equalTo(emailStackView).multipliedBy(2.5)
-            make.height.equalTo(nameStackView).multipliedBy(2.5)
+            make.height.equalTo(telStackView).multipliedBy(2)
+            make.height.equalTo(genderStackView).multipliedBy(2)
+            make.height.equalTo(passwordStackView).multipliedBy(2)
+            make.height.equalTo(emailStackView).multipliedBy(2)
+            make.height.equalTo(nameStackView).multipliedBy(2)
         }
     }
     

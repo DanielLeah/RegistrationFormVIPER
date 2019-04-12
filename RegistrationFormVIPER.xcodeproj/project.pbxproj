@@ -28,6 +28,7 @@
 		99E745DE225E3BB100E1273B /* SwiftEntryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745DA225E3BB100E1273B /* SwiftEntryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		99E745DF225E3BD100E1273B /* QuickLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745D9225E3BB100E1273B /* QuickLayout.framework */; };
 		99E745E0225E3BD100E1273B /* QuickLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99E745D9225E3BB100E1273B /* QuickLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99F4D1A222608BFB00DD8EB7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4D1A122608BFB00DD8EB7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		99E745D7225E1F5900E1273B /* RegistrationListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListWireFrame.swift; sourceTree = "<group>"; };
 		99E745D9225E3BB100E1273B /* QuickLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuickLayout.framework; sourceTree = "<group>"; };
 		99E745DA225E3BB100E1273B /* SwiftEntryKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEntryKit.framework; path = Carthage/Build/iOS/SwiftEntryKit.framework; sourceTree = "<group>"; };
+		99F4D1A122608BFB00DD8EB7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		99A05CD7225CB90500EE4A6C /* RegistrationFormVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				99F4D1A022608BE300DD8EB7 /* Extensions */,
 				99E745D4225E035400E1273B /* Validation */,
 				99A05CF4225CBE5F00EE4A6C /* RegistrationList */,
 				99A05CF5225CBE9300EE4A6C /* DetailsList */,
@@ -245,6 +248,14 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		99F4D1A022608BE300DD8EB7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				99F4D1A122608BFB00DD8EB7 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,6 +336,7 @@
 				99E745D1225DFB9700E1273B /* RegistrationListPresenter.swift in Sources */,
 				99A05CFE225CCD0800EE4A6C /* RegistrationListView.swift in Sources */,
 				99AE0674225F4C7300EC84B1 /* DetailsListView.swift in Sources */,
+				99F4D1A222608BFB00DD8EB7 /* Extensions.swift in Sources */,
 				99AE0679225F58DC00EC84B1 /* DetailsListWireFrame.swift in Sources */,
 				99AE0677225F57B000EC84B1 /* DetailsListProtocols.swift in Sources */,
 				99E745D6225E04B000E1273B /* Validation.swift in Sources */,

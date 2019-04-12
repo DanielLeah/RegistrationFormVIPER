@@ -23,7 +23,7 @@ class DetailsListWireFrame: DetailsListWireFrameProtocol {
         case 1:
             //top
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut , animations: {
-                view.view.frame = CGRect(x: 0, y:0, width: view.view.frame.width, height: 0)
+                view.view.frame = CGRect(x: 0, y:0, width: view.view.frame.width, height: view.view.frame.height * -1)
             }) { (finished) in
                 view.dismiss(animated: false, completion: nil)
             }

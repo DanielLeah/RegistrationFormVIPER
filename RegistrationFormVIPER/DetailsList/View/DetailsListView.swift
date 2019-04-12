@@ -18,6 +18,7 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
     
     override func viewDidLoad() {
         presenter?.viewDidLoad()
+        self.view.backgroundColor = .lightGray
         initViews()
         addGestures()
     }
@@ -72,7 +73,7 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
         
         let mainStackView : UIStackView = {
             let stackView = UIStackView(arrangedSubviews: [imgUser,textStackView])
-            stackView.axis = .horizontal
+            stackView.axis = .vertical
             stackView.distribution = .fillEqually
             stackView.spacing = 10
             return stackView
