@@ -15,13 +15,11 @@ class RegistrationListWireFrame: RegistrationListWireFrameProtocol {
         view.present(userDetailViewController, animated: true, completion: nil)
     }
     
-
-    
-//    func pushToDetails(from view: UIViewController) {
-//        let fruitDetailViewController = view.storyboard?.instantiateViewController(withIdentifier: "FruitDetailView") as! FruitDetailView
-//        FruitDetailWireFrame.createFruitDetailModule(with: fruitDetailViewController, and: fruit)
-//        view.navigationController?.pushViewController(fruitDetailViewController, animated: true)
-//    }
+    func pushToHTML(from view: UIViewController) {
+        let htmlSiteViewController = view.storyboard?.instantiateViewController(withIdentifier: "HtmlSiteView") as! HtmlSiteView
+        HtmlSiteWireFrame.createHtmlSiteModule(with: htmlSiteViewController)
+        view.present(htmlSiteViewController, animated: true, completion: nil)
+    }
     
     class func createRegistrationListModule(registListRef: RegistrationListView) {
         let presenter : RegistrationListPresenterProtocol & RegistrationListOutputInteractorProtocol = RegistrationListPresenter()

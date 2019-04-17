@@ -342,8 +342,17 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
     }
     
     @objc func buttonAction(){
+    // do this with EntryKit
+       /* let title = EKProperty.LabelContent(text: "Continue with HTML Page?", style: .init(font: UIFont.init(name: "OpenSans", size: 14)!, color: .black))
+        let description = EKProperty.LabelContent(text: "Description", style: .init(font: UIFont.init(name: "OpenSans", size: 14)!, color: .black))
+        let message = EKSimpleMessage(title: title, description: description)
+        let button = EKProperty.ButtonContent(
+        let buttonStack = EKProperty.ButtonBarContent(with: <#T##EKProperty.ButtonContent...##EKProperty.ButtonContent#>, separatorColor: .red, expandAnimatedly: true)
+        let alert = EKAlertMessage(simpleMessage: message, buttonBarContent: EKProperty.ButtonBarContent)*/
         user = Register(name: txtName.text!, email: txtEmail.text!, password: txtPassword.text!, gender: txtGender.titleForSegment(at: txtGender.selectedSegmentIndex)!, phone: txtTel.text!)
-        presenter?.evaluateInputs(inputs: user!)
+        self.presenter?.evaluateInputs(inputs: user!)
+        
+//
         
     }
     
@@ -352,7 +361,15 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         showNotification(message: message, img: img, superTitle: title)
     
         if (img == "success"){
-            presenter?.showUserDetails(view: self)
+            let alert = UIAlertController(title: "Continue with HTML Page?", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                self.presenter?.showHtmlDetails(view: self)
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action) in
+                self.presenter?.showUserDetails(view: self)
+            }))
+            
+            self.present(alert, animated: true)
         }
     }
     

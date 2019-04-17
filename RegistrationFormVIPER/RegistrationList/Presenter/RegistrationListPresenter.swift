@@ -29,6 +29,10 @@ class RegistrationListPresenter: RegistrationListPresenterProtocol {
     func showUserDetails(view: UIViewController){
         wireframe?.pushToDetail(from: view)
     }
+    
+    func showHtmlDetails(view: UIViewController){
+        wireframe?.pushToHTML(from: view)
+    }
 }
 
 extension RegistrationListPresenter: RegistrationListOutputInteractorProtocol{

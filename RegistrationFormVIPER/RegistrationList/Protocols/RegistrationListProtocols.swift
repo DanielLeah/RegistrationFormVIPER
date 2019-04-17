@@ -24,6 +24,7 @@ protocol RegistrationListPresenterProtocol : class {
     func evaluateInputs(inputs : Register)
     
     func showUserDetails(view: UIViewController)
+    func showHtmlDetails(view: UIViewController)
 }
 
 protocol RegistrationListInputInteractorProtocol : class {
@@ -40,5 +41,6 @@ protocol RegistrationListOutputInteractorProtocol : class {
 protocol RegistrationListWireFrameProtocol : class {
      //Presenter -> Wireframe
     func pushToDetail(from view: UIViewController)
+    func pushToHTML(from view: UIViewController)
     static func createRegistrationListModule(registListRef: RegistrationListView)
 }

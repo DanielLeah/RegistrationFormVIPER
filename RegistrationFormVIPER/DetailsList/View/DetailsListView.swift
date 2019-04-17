@@ -17,6 +17,7 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
     var presenter : DetailsListPresenterProtocol?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         presenter?.viewDidLoad()
         self.view.backgroundColor = .lightGray
         initViews()
@@ -28,8 +29,6 @@ class DetailsListView : UIViewController, DetailsListViewProtocol{
             let userDefault = try? JSONDecoder().decode(Register.self, from: userData) {
             user = userDefault
         }
-        
-        
     }
     
     func initViews(){

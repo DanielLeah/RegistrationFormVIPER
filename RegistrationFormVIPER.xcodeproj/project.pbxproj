@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9900D8372267389000F71BB2 /* HtmlSiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900D8362267389000F71BB2 /* HtmlSiteView.swift */; };
+		9924A43422675F8400B19241 /* Project Assesment in Resources */ = {isa = PBXBuildFile; fileRef = 9924A43322675F8400B19241 /* Project Assesment */; };
+		9924A4372267655A00B19241 /* HtmlSiteWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924A4362267655A00B19241 /* HtmlSiteWireFrame.swift */; };
+		9924A4392267656C00B19241 /* HtmlSiteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924A4382267656C00B19241 /* HtmlSiteInteractor.swift */; };
+		9924A43B2267657900B19241 /* HtmlSitePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924A43A2267657900B19241 /* HtmlSitePresenter.swift */; };
+		9924A43E226765B400B19241 /* HtmlSiteProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924A43D226765B400B19241 /* HtmlSiteProtocols.swift */; };
 		99A05CD9225CB90500EE4A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A05CD8225CB90500EE4A6C /* AppDelegate.swift */; };
 		99A05CDE225CB90500EE4A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A05CDC225CB90500EE4A6C /* Main.storyboard */; };
 		99A05CE0225CB90600EE4A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A05CDF225CB90600EE4A6C /* Assets.xcassets */; };
@@ -48,6 +54,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9900D8362267389000F71BB2 /* HtmlSiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlSiteView.swift; sourceTree = "<group>"; };
+		9924A43322675F8400B19241 /* Project Assesment */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Project Assesment"; sourceTree = "<group>"; };
+		9924A4362267655A00B19241 /* HtmlSiteWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlSiteWireFrame.swift; sourceTree = "<group>"; };
+		9924A4382267656C00B19241 /* HtmlSiteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlSiteInteractor.swift; sourceTree = "<group>"; };
+		9924A43A2267657900B19241 /* HtmlSitePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlSitePresenter.swift; sourceTree = "<group>"; };
+		9924A43D226765B400B19241 /* HtmlSiteProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlSiteProtocols.swift; sourceTree = "<group>"; };
 		99A05CD5225CB90500EE4A6C /* RegistrationFormVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationFormVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A05CD8225CB90500EE4A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A05CDD225CB90500EE4A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +97,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9900D832226722AE00F71BB2 /* HtmlSiteList */ = {
+			isa = PBXGroup;
+			children = (
+				9924A43C226765A300B19241 /* Protocols */,
+				9924A4352267637400B19241 /* WireFrame */,
+				9900D8352267385400F71BB2 /* Interactor */,
+				9900D8342267384300F71BB2 /* Presenter */,
+				9900D8332267383800F71BB2 /* View */,
+			);
+			path = HtmlSiteList;
+			sourceTree = "<group>";
+		};
+		9900D8332267383800F71BB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9900D8362267389000F71BB2 /* HtmlSiteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9900D8342267384300F71BB2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9924A43A2267657900B19241 /* HtmlSitePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9900D8352267385400F71BB2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9924A4382267656C00B19241 /* HtmlSiteInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9924A4352267637400B19241 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				9924A4362267655A00B19241 /* HtmlSiteWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		9924A43C226765A300B19241 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9924A43D226765B400B19241 /* HtmlSiteProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		99A05CCC225CB90500EE4A6C = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +171,12 @@
 		99A05CD7225CB90500EE4A6C /* RegistrationFormVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				9924A43322675F8400B19241 /* Project Assesment */,
 				99F4D1A022608BE300DD8EB7 /* Extensions */,
 				99E745D4225E035400E1273B /* Validation */,
 				99A05CF4225CBE5F00EE4A6C /* RegistrationList */,
 				99A05CF5225CBE9300EE4A6C /* DetailsList */,
+				9900D832226722AE00F71BB2 /* HtmlSiteList */,
 				99A05CD8225CB90500EE4A6C /* AppDelegate.swift */,
 				99A05CDC225CB90500EE4A6C /* Main.storyboard */,
 				99A05CDF225CB90600EE4A6C /* Assets.xcassets */,
@@ -318,6 +384,7 @@
 				99A05CE3225CB90600EE4A6C /* LaunchScreen.storyboard in Resources */,
 				99A05CE0225CB90600EE4A6C /* Assets.xcassets in Resources */,
 				99A05CDE225CB90500EE4A6C /* Main.storyboard in Resources */,
+				9924A43422675F8400B19241 /* Project Assesment in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +399,17 @@
 				99A05CFC225CC0E900EE4A6C /* RegistrationListProtocols.swift in Sources */,
 				99E745D3225DFCBC00E1273B /* RegistrationListInteractor.swift in Sources */,
 				99E745D8225E1F5900E1273B /* RegistrationListWireFrame.swift in Sources */,
+				9900D8372267389000F71BB2 /* HtmlSiteView.swift in Sources */,
 				99E745CF225DF37300E1273B /* Register.swift in Sources */,
 				99E745D1225DFB9700E1273B /* RegistrationListPresenter.swift in Sources */,
+				9924A43E226765B400B19241 /* HtmlSiteProtocols.swift in Sources */,
+				9924A4372267655A00B19241 /* HtmlSiteWireFrame.swift in Sources */,
+				9924A4392267656C00B19241 /* HtmlSiteInteractor.swift in Sources */,
 				99A05CFE225CCD0800EE4A6C /* RegistrationListView.swift in Sources */,
 				99AE0674225F4C7300EC84B1 /* DetailsListView.swift in Sources */,
 				99F4D1A222608BFB00DD8EB7 /* Extensions.swift in Sources */,
 				99AE0679225F58DC00EC84B1 /* DetailsListWireFrame.swift in Sources */,
+				9924A43B2267657900B19241 /* HtmlSitePresenter.swift in Sources */,
 				99AE0677225F57B000EC84B1 /* DetailsListProtocols.swift in Sources */,
 				99E745D6225E04B000E1273B /* Validation.swift in Sources */,
 				99AE067B225F596600EC84B1 /* DetailsListPresenter.swift in Sources */,
