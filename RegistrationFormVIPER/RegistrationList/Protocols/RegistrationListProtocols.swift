@@ -31,6 +31,7 @@ protocol RegistrationListInputInteractorProtocol : class {
     //Presenter -> Interactor
     var presenter: RegistrationListOutputInteractorProtocol? {get set}
     func evaluate(inputs: Register)
+    func loadFromDefaults () -> Register
 }
 
 protocol RegistrationListOutputInteractorProtocol : class {

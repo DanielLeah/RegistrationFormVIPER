@@ -90,25 +90,12 @@ class HtmlSiteView : UIViewController,  WKScriptMessageHandler, WKNavigationDele
     
     func saveData(data: [String : String]) {
         let firstLast = data["firstName"]! + " " + data["lastName"]!
-        let user : Register = Register(name: firstLast, email: data["email"]!, password: "", gender: data["gender"]!, phone: "00000000000")
+        let gender = data["gender"]!.prefix(1).uppercased() + data["gender"]!.dropFirst()
+        let user : Register = Register(name: firstLast, email: data["email"]!, password: "", gender: gender, phone: "00000000000")
         if let encoded = try? JSONEncoder().encode(user) {
             UserDefaults.standard.set(encoded, forKey: "user")
         }
     }
-    
-    func updateHTMLUI(){
-        if let inputsDetails = UserDefaults.standard.dictionary(forKey: "userDetails"){
-            webView.evaluateJavaScript("document.getElementById(\"firstname\").value = \"\(inputsDetails["firstName"]!)\"", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"lastname\").value = \"\(inputsDetails["lastName"]!)\"", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"email\").value = \"\(inputsDetails["email"]!)\"", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"gender\").value = \"\(inputsDetails["gender"]!)\"", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"bday\").value = \"\(inputsDetails["bday"]!)\"", completionHandler: nil)
-        }
-        
-    }
-    
-    
-    
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         var inputsHTML : [String : String]

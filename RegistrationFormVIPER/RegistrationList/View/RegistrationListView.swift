@@ -63,10 +63,11 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         setupInputs()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        loadUser()
     }
+    
     //MARK: Gesture Recognizer
     func addGestures(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -351,10 +352,37 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         let alert = EKAlertMessage(simpleMessage: message, buttonBarContent: EKProperty.ButtonBarContent)*/
         user = Register(name: txtName.text!, email: txtEmail.text!, password: txtPassword.text!, gender: txtGender.titleForSegment(at: txtGender.selectedSegmentIndex)!, phone: txtTel.text!)
         self.presenter?.evaluateInputs(inputs: user!)
-        
-//
-        
+    
     }
+    
+    
+    func loadUser(){
+        user = presenter?.interactor?.loadFromDefaults()
+        updateUI()
+    }
+    
+    func clearInputs() {
+        txtName.text = ""
+        txtTel.text = ""
+        txtGender.selectedSegmentIndex = 0
+        txtEmail.text = ""
+        txtPassword.text = ""
+    }
+    
+    func updateUI(){
+        txtName.text = user.name
+        txtTel.text = user.phone
+        if (user.gender == "Male"){
+            txtGender.selectedSegmentIndex = 1
+        }else if (user.gender == "Female"){
+            txtGender.selectedSegmentIndex = 2
+        }else{
+            txtGender.selectedSegmentIndex = 0
+        }
+        txtEmail.text = user.email
+        txtPassword.text = user.password
+    }
+    
     
     func setAlerts(message : String, img : String, title: String) {
 
@@ -363,6 +391,7 @@ class RegistrationListView : UIViewController, RegistrationListViewProtocol {
         if (img == "success"){
             let alert = UIAlertController(title: "Continue with HTML Page?", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                self.clearInputs()
                 self.presenter?.showHtmlDetails(view: self)
             }))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action) in

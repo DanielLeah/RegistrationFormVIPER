@@ -10,6 +10,7 @@ import UIKit
 
 class RegistrationListInteractor: RegistrationListInputInteractorProtocol {
     weak var presenter : RegistrationListOutputInteractorProtocol?
+    var user : Register!
     
     func evaluate(inputs: Register) {
         presenter?.didEvaluateWithResult(message: evaluate(inputs: inputs).0, img: evaluate(inputs: inputs).1, title: evaluate(inputs: inputs).2)
@@ -91,7 +92,14 @@ class RegistrationListInteractor: RegistrationListInputInteractorProtocol {
         if let encoded = try? JSONEncoder().encode(user) {
             UserDefaults.standard.set(encoded, forKey: "user")
         }
-
+    }
+    
+    func loadFromDefaults () -> Register {
+        if let userData = UserDefaults.standard.data(forKey: "user"),
+            let userDefault = try? JSONDecoder().decode(Register.self, from: userData) {
+            user = userDefault
+        }
+        return user
     }
     
 }
