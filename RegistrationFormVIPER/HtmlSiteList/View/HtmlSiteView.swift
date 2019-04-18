@@ -79,16 +79,21 @@ class HtmlSiteView : UIViewController,  WKScriptMessageHandler, WKNavigationDele
     func loadData(){
         if let userData = UserDefaults.standard.data(forKey: "user"),
             let userDefault = try? JSONDecoder().decode(Register.self, from: userData) {
-            webView.evaluateJavaScript("document.getElementById(\"firstname\").value = \"\(userDefault.name)\"", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"lastname\").value = \"\(userDefault.name)\"", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"email\").value = 'Damo'", completionHandler: nil)
-            webView.evaluateJavaScript("document.getElementById(\"gender\").value = \"\(userDefault.gender)\"", completionHandler: nil)
+            var firstLastName = userDefault.name.split(separator: " ", maxSplits: 1)
+            webView.evaluateJavaScript("document.getElementById(\"firstname\").value = \"\(firstLastName[0])\"", completionHandler: nil)
+            webView.evaluateJavaScript("document.getElementById(\"lastname\").value = \"\(firstLastName[1])\"", completionHandler: nil)
+            webView.evaluateJavaScript("document.getElementById(\"email\").value = \"\(userDefault.email)\"", completionHandler: nil)
+            webView.evaluateJavaScript("document.getElementById(\"gender\").value = \"\(userDefault.gender.lowercased())\"", completionHandler: nil)
             webView.evaluateJavaScript("document.getElementById(\"bday\").value = '11/10/1994'", completionHandler: nil)
         }
     }
     
-    func saveData(data: [String : AnyObject]) {
-        UserDefaults.standard.set(data, forKey: "userDetails")
+    func saveData(data: [String : String]) {
+        let firstLast = data["firstName"]! + " " + data["lastName"]!
+        let user : Register = Register(name: firstLast, email: data["email"]!, password: "", gender: data["gender"]!, phone: "00000000000")
+        if let encoded = try? JSONEncoder().encode(user) {
+            UserDefaults.standard.set(encoded, forKey: "user")
+        }
     }
     
     func updateHTMLUI(){
@@ -106,14 +111,14 @@ class HtmlSiteView : UIViewController,  WKScriptMessageHandler, WKNavigationDele
     
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        var inputsHTML : [String : AnyObject]
+        var inputsHTML : [String : String]
             if message.name == "jsHandler" {
-                inputsHTML = message.body as! [String : AnyObject]
+                inputsHTML = message.body as! [String : String]
                 saveData(data: inputsHTML)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
                     self.webView.evaluateJavaScript("controller.clearLocalInputs()", completionHandler: nil)
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                        self.updateHTMLUI()
+                        self.loadData()
                     }
                 }
             }

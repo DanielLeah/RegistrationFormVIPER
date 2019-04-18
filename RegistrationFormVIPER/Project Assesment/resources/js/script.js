@@ -158,8 +158,8 @@ var controller = (function(regisCtrl, UICtrl){
             }
         });
         if (isValid){
-            if( /Dani/i.test(navigator.userAgent) ) {
-                document.getElementById("inputs").innerHTML = "Dani"
+            if( /AppAgent/i.test(navigator.userAgent) ) {
+                document.getElementById("inputs").innerHTML = ""
                 window.webkit.messageHandlers.jsHandler.postMessage(input);
                 
             }else{
